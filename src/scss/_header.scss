@@ -1,32 +1,32 @@
 header {
     position: relative;
-    background: url('src/images/one-piece-red-poster.jpg') no-repeat center;
-    background-size: cover;
-    height: 70vh; /* Diminuindo a altura do header */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(216, 27, 27);
-    text-align: center;
-    overflow: hidden; /* Para garantir que nada saia do header */
+    overflow: hidden;
+
+    /* Estilizando a imagem */
+    .header-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Garante que a imagem cubra todo o header sem distorção */
+        z-index: 0; /* Para garantir que o texto fique por cima */
+    }
 
     h1 {
-        font-size: 3rem; /* Diminuindo o tamanho da fonte */
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         position: relative;
-        z-index: 1;
+        z-index: 1; /* Coloca o texto acima da imagem */
+        color: white;
+        font-size: 4rem;
+        font-weight: bold;
+        text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8); /* Adiciona sombra ao texto para melhor legibilidade */
+        text-align: center;
+        text-transform: uppercase;
     }
 
-    /* Pseudo-elemento para o efeito de bordas em degrade */
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0; /* Alterando para ficar mais alinhado ao topo */
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); /* Ajustando o degradê */
-        border-radius: 15px; /* Bordas arredondadas */
-        z-index: 0;
-    }
 }
+    /* Adicionando um overlay para um
