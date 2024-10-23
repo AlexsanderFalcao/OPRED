@@ -1,0 +1,62 @@
+.characters {
+    margin-top: 24px;
+    display: flex;
+    text-align: center; /* Centraliza o texto da seção */
+    margin: 40px 0; /* Espaçamento superior e inferior */
+
+    h2 {
+        font-size: 24px; /* Tamanho da fonte do título */
+        color: #333; /* Cor do texto */
+        margin-bottom: 30px; /* Espaçamento abaixo do título */
+        font-family: 'Arial', sans-serif; /* Fonte moderna */
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px; /* Largura da linha */
+            height: 4px; /* Altura da linha */
+            background: #ff4757; /* Cor da linha */
+            margin: 10px auto; /* Centraliza a linha */
+            border-radius: 2px; /* Bordas arredondadas */
+        }
+    }
+
+    .character-card {
+        background: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+        border-radius: 15px; /* Bordas arredondadas */
+        padding: 20px; /* Espaçamento interno */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para os cards */
+        transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+        width: 200px; /* Largura dos cards */
+        margin: 10px; /* Espaçamento entre os cards */
+
+        img {
+            width: 100%; /* Imagem ocupa toda a largura do card */
+            border-radius: 10px; /* Bordas arredondadas nas imagens */
+        }
+
+        h3 {
+            font-size: 24px; /* Tamanho da fonte do título */
+            color: #333; /* Cor do texto */
+            margin-bottom: 30px; /* Espaçamento abaixo do título */
+            font-family: 'Arial', sans-serif; /* Fonte moderna */
+            position: relative;
+    
+            &::after {
+                content: '';
+                display: block;
+                width: 50px; /* Largura da linha */
+                height: 4px; /* Altura da linha */
+                background: #ff4757; /* Cor da linha */
+                margin: 10px auto; /* Centraliza a linha */
+                border-radius: 2px; /* Bordas arredondadas */
+            }
+        }
+
+        &:hover {
+            transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+        }
+    }
+}

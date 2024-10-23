@@ -1,0 +1,19 @@
+footer {
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: #ff9800;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}

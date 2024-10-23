@@ -1,0 +1,78 @@
+.main {
+    padding: 50px 20px; /* Espaçamento interno */
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    text-align: center; /* Centraliza o texto */
+
+    h2 {
+        font-size: 36px; /* Tamanho da fonte do título */
+        color: #333; /* Cor do texto */
+        margin-bottom: 30px; /* Espaçamento abaixo do título */
+        font-family: 'Arial', sans-serif; /* Fonte moderna */
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px; /* Largura da linha */
+            height: 4px; /* Altura da linha */
+            background: #ff4757; /* Cor da linha */
+            margin: 10px auto; /* Centraliza a linha */
+            border-radius: 2px; /* Bordas arredondadas */
+        }
+    }
+
+    .platforms-container {
+        display: flex; /* Usa flexbox para layout */
+        justify-content: center; /* Centraliza os itens */
+        align-items: center; /* Alinha os itens verticalmente */
+        gap: 30px; /* Espaçamento entre as imagens */
+        flex-wrap: wrap; /* Permite que as imagens quebrem a linha se necessário */
+
+        img {
+            max-width: 78px; /* Largura máxima das imagens */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 10px; /* Bordas arredondadas nas imagens */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+
+            &:hover {
+                transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+            }
+        }
+    }
+}
+
+
+.video-container {
+    max-width: 800px; /* Ajuste a largura máxima do vídeo */
+    margin: 0 auto; /* Centraliza o vídeo na tela */
+    border-radius: 15px; /* Bordas arredondadas */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse o contêiner */
+    padding-bottom: 32px;
+
+
+    h2 {
+        font-size: 24px; /* Tamanho da fonte do título */
+        color: #333; /* Cor do texto */
+        margin-bottom: 30px; /* Espaçamento abaixo do título */
+        font-family: 'Arial', sans-serif; /* Fonte moderna */
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 50px; /* Largura da linha */
+            height: 4px; /* Altura da linha */
+            background: #ff4757; /* Cor da linha */
+            margin: 10px auto; /* Centraliza a linha */
+            border-radius: 2px; /* Bordas arredondadas */
+        }
+    }
+
+    iframe {
+        width: 100%; /* Faz o iframe ocupar 100% da largura do contêiner */
+        height: 450px; /* Ajuste a altura conforme necessário */
+        border: none; /* Remove a borda do iframe */
+        border-radius: 15px; /* Bordas arredondadas para o iframe também */
+    }
+}
