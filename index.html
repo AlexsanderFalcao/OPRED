@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
 <body>
-    <header>
-        <img src="src/images/one-piece-red-poster.jpg" alt="One Piece Red Poster" class="header-img">
+    <header class="header">
+        <div class="header-background">
+            <img src="src/images/one-piece-red-poster.jpg" alt="One Piece Red Poster" class="poster-image" />
+        </div>
+        <div class="header-content">
+            <h1 class="movie-title">One Piece Film: Red</h1>
+            <a href="#" class="watch-button">Assistir</a>
+        </div>
     </header>
     
+
 
     <div class="video-container">
         <h2>Assista o trailer:</h2>
@@ -53,10 +60,43 @@
             <img src="src/images/uta.jpeg" alt="Uta">
             <h3>Uta</h3>
         </div>
-    </section>       
+    </section>     
+    
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3 class="faq-question">Qual é a data de lançamento do filme?</h3>
+            <p class="faq-answer">One Piece Film: Red foi lançado em 6 de agosto de 2022.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Onde posso assistir ao filme?</h3>
+            <p class="faq-answer">O filme está disponível em várias plataformas de streaming, incluindo Netflix e Amazon Prime Video.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Qual é a classificação do filme?</h3>
+            <p class="faq-answer">One Piece Film: Red é classificado como PG-13 devido a algumas cenas de ação e violência.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">Quem são os personagens principais?</h3>
+            <p class="faq-answer">Os personagens principais incluem Monkey D. Luffy, Shanks e Uta.</p>
+        </div>
+    </section>
+    
 
     <footer>
         <p>&copy; 2024 One Piece Film: Red. <a href="#">Termos e Condições</a></p>
     </footer>
+    <script>
+        document.querySelectorAll('.faq-item').forEach((item) => {
+            const question = item.querySelector('.faq-question');
+    
+            question.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block'; 
+            });
+        });
+    </script>
+    </body>
+    
 </body>
 </html>

@@ -1,32 +1,43 @@
-header {
+.header {
     position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
+    text-align: center; /* Centraliza o texto do título */
 
-    /* Estilizando a imagem */
-    .header-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Garante que a imagem cubra todo o header sem distorção */
-        z-index: 0; /* Para garantir que o texto fique por cima */
+    .header-background {
+        img.poster-image {
+            width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner */
+            height: auto; /* Mantém a proporção da imagem */
+            object-fit: cover; /* Cobre toda a área do header */
+            max-height: 70vh; /* Limita a altura máxima */
+        }
     }
 
-    h1 {
-        position: relative;
-        z-index: 1; /* Coloca o texto acima da imagem */
-        color: white;
-        font-size: 4rem;
-        font-weight: bold;
-        text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8); /* Adiciona sombra ao texto para melhor legibilidade */
-        text-align: center;
-        text-transform: uppercase;
-    }
+    .header-content {
+        position: absolute; /* Posiciona o conteúdo sobre a imagem */
+        bottom: 20px; /* Distância do fundo */
+        left: 50%; /* Para centralizar horizontalmente */
+        transform: translateX(-50%); /* Ajusta o centro */
+        color: white; /* Cor do texto */
+        z-index: 2; /* Garante que o texto fique acima da imagem */
 
+        .movie-title {
+            font-size: 2.5rem; /* Tamanho do título */
+            margin-bottom: 10px; /* Espaço abaixo do título */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para legibilidade */
+        }
+
+        .watch-button {
+            background-color: #ff4757; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            padding: 10px 20px; /* Espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+            text-decoration: none; /* Remove o sublinhado */
+            font-weight: bold; /* Fonte em negrito */
+            transition: background-color 0.3s; /* Transição suave para a cor do botão */
+
+            &:hover {
+                background-color: #e84118; /* Cor do botão ao passar o mouse */
+            }
+        }
+    }
 }
-    /* Adicionando um overlay para um
