@@ -1,26 +1,29 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const imagemin = require('gulp-imagemin'); // Importe o gulp-imagemin
+const imagemin = require('gulp-imagemin');
 
 // Tarefa para compilar Sass
 gulp.task('sass', function() {
-    return gulp.src('src/scss/**/*.scss') // Caminho para seus arquivos .scss
+    return gulp.src('src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css')); // Caminho para onde o CSS compilado será salvo
+        .pipe(gulp.dest('dist/css'));
 });
 
 // Tarefa para otimizar imagens
 gulp.task('images', function() {
-    return gulp.src('src/images/*') // Caminho para suas imagens
-        .pipe(imagemin()) // Otimiza as imagens
-        .pipe(gulp.dest('dist/images')); // Caminho para onde as imagens otimizadas serão salvas
+    return gulp.src('src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'));
 });
 
-// Tarefa para observar mudanças nos arquivos Sass e nas imagens
+// Tarefa para observar mudanças (apenas para desenvolvimento)
 gulp.task('watch', function() {
-    gulp.watch('src/scss/**/*.scss', gulp.series('sass')); // Observa as mudanças nos arquivos .scss
-    gulp.watch('src/images/*', gulp.series('images')); // Observa as mudanças nas imagens
+    gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
+    gulp.watch('src/images/*', gulp.series('images'));
 });
 
-// Tarefa padrão
-gulp.task('default', gulp.series('sass', 'images', 'watch')); // Executa Sass, imagens e watch
+// Tarefa padrão para build
+gulp.task('default', gulp.series('sass', 'images'));
+
+// Tarefa de desenvolvimento (roda com `gulp dev`)
+gulp.task('dev', gulp.series('sass', 'images', 'watch'));
